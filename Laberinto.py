@@ -7,7 +7,9 @@ def crear_laberinto():
                 laberinto.append(([' '])*5)  # Creamos el laberinto sin muros
         for i in muro:                                 
                 laberinto[int(i[0])][int(i[1])] = 'X'   # De esta manera cada coordenada del                                    
-        return laberinto                                # muro sera una 'X' en el laberinto
+        laberinto [4][4] = 'S'                          # muro sera una 'X' en el laberinto
+        laberinto [0][0] = 'E'   # La primera coordenada del laberinto es
+        return laberinto         # una E y la ultima una S
 
 ole_ole = crear_laberinto()   # Llamamos a la funcion
 
