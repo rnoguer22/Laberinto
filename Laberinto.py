@@ -1,8 +1,10 @@
-laberinto = []   # Definimos el futuro laberinto como una lista vacia
-muro = ((0,1), (0,2), (0,3), (0,4), (1,1), (2,1), (2,3), (3,3), (4,0), (4,1), (4,2), (4,3))   
-# Creamos las cordenadas de los futuros muros del laberinto
+from colorama import init, Fore, Back
+init(autoreset=True)
 
 def crear_laberinto():
+        laberinto = []   # Definimos el futuro laberinto como una lista vacia
+        muro = ((0,1), (0,2), (0,3), (0,4), (1,1), (2,1), (2,3), (3,3), (4,0), (4,1), (4,2), (4,3))   
+                # Creamos las cordenadas de los futuros muros del laberinto
         for _ in range (5):
                 laberinto.append(([' '])*5)  # Creamos el laberinto sin muros
         for i in muro:                                 
@@ -10,6 +12,10 @@ def crear_laberinto():
         laberinto [4][4] = 'S'                          # muro sera una 'X' en el laberinto
         laberinto [0][0] = 'E'   # La primera coordenada del laberinto es
         return laberinto         # una E y la ultima una S
+
+def secuencia_movimientos():
+        
+        return 
 
 ole_ole = crear_laberinto()   # Llamamos a la funcion
 
