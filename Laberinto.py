@@ -10,3 +10,10 @@ laberinto [0][0] = 'E'   # La primera coordenada del laberinto es una E y la ult
 for i in range (5):
         print (laberinto[i])   
         # Printamos de esta manera para obtener saltos de linea
+
+def movimientos ():
+        movements = []
+        for i in laberinto:
+                if i != 'X':
+                             
+        return movements
