@@ -11,33 +11,33 @@ for i in range (5):
         print (laberinto[i])   
         # Printamos de esta manera para obtener saltos de linea
 
-def movimientos ():
+def movimientos ():   # Definimos la funcion "movimientos"
         movements = []
         m = 0
         n = 0
         k = 0
         l = 0
-        while laberinto[m][n] != 'S':
-                if k <= n < 4 and laberinto[m][n+1] != 'X':
+        while laberinto[m][n] != 'S':   # Bucle que nos va a recorrer todas las casillas del laberinto hasta la ultima
+                if k <= n < 4 and laberinto[m][n+1] != 'X':   # Condicion para añadir los movimientos hacia la derecha
                         movements.append("Derecha")
                         n += 1
                         k = n-1
                         l = m
-                elif 0 < n < k and laberinto[m][n-1] != 'X':
+                elif 0 < n < k and laberinto[m][n-1] != 'X':   # Condicion para añadir los movimientos hacia la izquierda
                         movements.append("Izquierda")
                         n -= 1
                         k = n+1
                         l = n
-                elif l <= m < 4 and laberinto[m+1][n] != 'X':
+                elif l <= m < 4 and laberinto[m+1][n] != 'X':   # Condicion para añadir los movimientos hacia abajo
                         movements.append("Abajo")
                         m += 1
                         l = m - 1
                         k = n
-                else:
+                else:   # Ultima condicion posible como resultado de las demas, para añadir movimientos hacia arriba
                         movements.append("Arriba")
                         m -= 1
                         l = m + 1
                         k = n
-        return movements
+        return movements   # Devuelve una lista con todos los movimientos
 
 print (movimientos())
