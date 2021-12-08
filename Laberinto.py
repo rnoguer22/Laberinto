@@ -20,25 +20,21 @@ def movimientos ():
         while laberinto[m][n] != 'S':
                 if k <= n < 4 and laberinto[m][n+1] != 'X':
                         movements.append("Derecha")
-                        print (movements)
                         n += 1
                         k = n-1
                         l = m
                 elif 0 < n < k and laberinto[m][n-1] != 'X':
                         movements.append("Izquierda")
-                        print(movements)
                         n -= 1
                         k = n+1
                         l = n
                 elif l <= m < 4 and laberinto[m+1][n] != 'X':
                         movements.append("Abajo")
-                        print (movements)
                         m += 1
                         l = m - 1
                         k = n
                 else:
                         movements.append("Arriba")
-                        print (movements)
                         m -= 1
                         l = m + 1
                         k = n
