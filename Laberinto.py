@@ -40,4 +40,4 @@ def movimientos ():   # Definimos la funcion "movimientos"
                         k = n
         return movements   # Devuelve una lista con todos los movimientos
 
-print (movimientos())
+print ("Los movimientos para recorrer el laberinto son:\n{}".format(movimientos()))
