@@ -36,14 +36,12 @@ def movimientos ():
                         m += 1
                         l = m - 1
                         k = n
-                elif 0 < m <= 1 and laberinto[m-1][n] != 'X':
+                else:
                         movements.append("Arriba")
                         print (movements)
                         m -= 1
                         l = m + 1
                         k = n
-                elif m > 4 or n > 4:
-                        break
         return movements
 
 print (movimientos())
